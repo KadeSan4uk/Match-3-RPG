@@ -137,5 +137,5 @@ AssetOrigin:
   productId: 98823
   packageName: 'Match 3 Kit: Sweet Sugar Candy'
   packageVersion: 1.7.3
-  assetPath: Assets/SweetSugar/Textures_png/Items/TimeBomb/bomb-count-lable.png
+  assetPath: Assets/Sprites/Items/TimeBomb/bomb-count-lable.png
   uploadId: 754451

@@ -340,7 +340,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5894955071867282795
+--- !u!1001 &2300080414188280918
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -354,7 +354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4429098007009413587, guid: f346eef2f72e04a87aaadb099a69d8af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4429098007009413587, guid: f346eef2f72e04a87aaadb099a69d8af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -392,10 +392,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Match3Game
       objectReference: {fileID: 0}
-    - target: {fileID: 9133704621974487526, guid: f346eef2f72e04a87aaadb099a69d8af, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -407,4 +403,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 5894955071867282795}
+  - {fileID: 2300080414188280918}

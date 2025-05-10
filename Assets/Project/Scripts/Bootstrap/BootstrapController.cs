@@ -1,16 +1,45 @@
-using UnityEngine;
+using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
-public class BootstrapController : MonoBehaviour
+namespace Project.Scripts.Bootstrap
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class BootstrapController
     {
+        private const string LobbySceneTag = "Lobby";
         
-    }
+        private readonly BootstrapView _bootstrapView;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public BootstrapController(BootstrapView bootstrapView)
+        {
+            _bootstrapView = bootstrapView;
+            _bootstrapView.SetProgress(0);
+        }
+
+        public async Task StartAsync()
+        {
+            await Task.Delay(1000);
+
+            _bootstrapView.SetProgress(10);
+            
+            await Task.Delay(1000);
+
+            _bootstrapView.SetProgress(30);
+            
+            await Task.Delay(1000);
+
+            _bootstrapView.SetProgress(60);
+            
+            await Task.Delay(1000);
+
+            _bootstrapView.SetProgress(80);
+            
+            await Task.Delay(1000);
+            
+            _bootstrapView.SetProgress(80);
+            
+            await Task.Delay(1000);
+
+            SceneManager.LoadSceneAsync(LobbySceneTag);
+        }
     }
 }

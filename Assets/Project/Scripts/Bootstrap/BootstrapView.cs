@@ -1,16 +1,21 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class BootstrapView : MonoBehaviour
+namespace Project.Scripts.Bootstrap
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class BootstrapView : MonoBehaviour
     {
-        
-    }
+        [SerializeField]
+        private Slider _slider;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField]
+        private TMP_Text _progressText;
+
+        public void SetProgress(int progress)
+        {
+            _slider.value = progress / 100f;
+            _progressText.text = $"{progress}%";
+        }
     }
 }

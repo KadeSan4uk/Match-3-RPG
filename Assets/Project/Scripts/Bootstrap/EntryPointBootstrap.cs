@@ -1,16 +1,30 @@
+using System;
 using UnityEngine;
 
-public class EntryPointBootstrap : MonoBehaviour
+namespace Project.Scripts.Bootstrap
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class EntryPointBootstrap : MonoBehaviour
     {
-        
-    }
+        [SerializeField]
+        private BootstrapView _bootstrapView;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private BootstrapController _controller;
+    
+        private void Awake()
+        {
+            _controller = new BootstrapController(_bootstrapView);
+        }
+
+        private async void Start()
+        {
+            try
+            {
+                await _controller.StartAsync();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+            }
+        }
     }
 }

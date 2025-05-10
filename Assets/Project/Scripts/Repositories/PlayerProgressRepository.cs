@@ -1,16 +1,25 @@
-using UnityEngine;
-
-public class PlayerProgressRepository : MonoBehaviour
+namespace Project.Scripts.Repositories
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+	public class PlayerProgressRepository
+	{
+		private static PlayerProgressRepository _instance;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+		public int CurrentLevel { get; private set; }
+
+		public static PlayerProgressRepository Instance
+		{
+			get
+			{
+				_instance ??= new PlayerProgressRepository();
+
+				return _instance;
+			}
+		}
+
+
+		private PlayerProgressRepository()
+		{
+			CurrentLevel = 0;
+		}
+	}
 }
